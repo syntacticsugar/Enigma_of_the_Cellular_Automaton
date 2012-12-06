@@ -226,3 +226,44 @@ p {
 	line-height: 22px;
 	margin-bottom: 18px;
 }
+.spark ul {
+    float: left;
+    list-style: none outside none;
+    margin: 0 0 0 30px;
+    padding: 0;
+}
+.spark ul li {
+    margin-right: 10px;
+}
+.spark li {
+    background-image: -moz-linear-gradient(center top , #FAFAFA 0px, #DCDCDC 100%);
+    border-color: #ACACAC;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    height: 2.95em;
+    line-height: 2.8em;
+    margin-right: 10px;
+    outline: 0 none;
+    padding: 0 0.91em;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+.spark li:hover {
+    background-color: #E0E0E0;
+    background-image: -moz-linear-gradient(center top , #FAFAFA 0px, #DCDCDC 100%);
+    border-color: #CCCCCC #CCCCCC #AAAAAA;
+    box-shadow: 0 0 1px #FFFFFF inset;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+.spark li:active {
+    background-image: -moz-linear-gradient(center top , #C8C8C8 0px, #E6E6E6 100%);
+    border-color: #888888 #AAAAAA #CCCCCC;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25) inset, 0 1px 0 #FFFFFF;
+}
