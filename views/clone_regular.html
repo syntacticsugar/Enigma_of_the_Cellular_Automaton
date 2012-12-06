@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title>clone of regular</title>
+        <script src="/javascripts/jquery.min.js"></script>
+        <script type="text/javascript">
+            console.log($);
+            console.log('avocado');
+            function flipCell(html_element){
+                var current = html_element.attr("state");
+                var new_value = current == "1" ? "0" : "1";
+                html_element.attr('state', new_value);
+            }
+            $(document).ready(function(){
+                var cells = $('.cell');
+                var interval = setInterval(function() {
+                    cells.each(function(){
+                        flipCell($(this));
+                    });
+                }, 2000);
+                $('.cell').click(function(){
+                    flipCell($(this));
+                });
+            });
+
+        </script>
+        <style>
+            .cell {
+                width: 60px;
+                height: 60px;
+                display: block;
+                border-bottom: 2px solid navy;
+                padding: 1px;
+            }
+            .cell[state="1"]{
+                background: #CDC1C5;
+            }
+            .cell:last-child {
+                border: 0;
+            }
+            .column {
+                border-right: 1px dashed cadetblue;
+                float: left;
+            }
+            .column:last-child {
+                border: 0;
+            }
+            #game-wrapper{
+                margin: 0 auto;
+                margin-top: 10%;
+                margin-left: 10%;
+            }
+
+            #grid{
+                overflow: hidden;
+                border: 2px dotted gray;
+                float: left;
+            }
+
+        </style>
+    </head>
+    <body id="game-wrapper">
+        <section id="grid">
+            <div class="column">
+                <div class="cell" state="1"></div>
+                <div class="cell" state="1"></div>
+                <div class="cell" state="1"></div>
+                <div class="cell" state="1"></div>
+                <div class="cell" state="1"></div>
+            </div>
+            <div class="column">
+                <div class="cell" state="1"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell" state="1"></div>
+            </div>
+            <div class="column">
+                <div class="cell" state="1"></div>
+                <div class="cell"></div>
+                <div class="cell" state="1"></div>
+                <div class="cell"></div>
+                <div class="cell" state="1"></div>
+            </div>
+            <div class="column">
+                <div class="cell" state="1"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell" state="1"></div>
+            </div>
+            <div class="column">
+                <div class="cell" state="1"></div>
+                <div class="cell" state="1"></div>
+                <div class="cell" state="1"></div>
+                <div class="cell" state="1"></div>
+                <div class="cell" state="1"></div>
+            </div>
+
+        </section>
+    </body>
+    <footer></footer>
+</html>

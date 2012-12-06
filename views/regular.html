@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <script src="/javascripts/jquery.min.js"></script>
+        <script src=""></script>
+        <script type="text/javascript">
+            console.log($);
+            function toggleCell(el) {
+                var current_val = el.attr('is_on'),
+                    new_val = current_val == "1" ? "0" : "1";
+                el.attr('is_on', new_val);
+            }
+            $(document).ready(function() {
+
+                var cells = $('.cell');
+                // button on click -> if interval , clear it, otherwise, create a new one
+                // clearInterval(interval)
+                var interval = setInterval(function() {
+                 cells.each(function() {
+                        toggleCell($(this));
+                    });
+                },2000);
+                $('.cell').click(function() {
+                    toggleCell($(this));
+                });
+            });
+        </script>
+        <style>
+           .cell {
+                width: 60px;
+                height: 60px;
+                display: block;
+                border-bottom: 2px solid navy;
+            }
+            .cell:last-child {
+                border-bottom: 0;
+            }
+            .cell[is_on="1"] {
+                background: cadetblue;
+            }
+            .column {
+                float: left;
+                border-right: 2px solid navy;
+            }
+            .column:last-child {
+                border-right: 0;
+            }
+            #game-wrapper {
+                margin: 0 auto;
+                margin-left: 10%;
+            }
+            #grid {
+                overflow:hidden;
+                border: 2px dotted gray;
+                float: left;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Game o life, yo</h3>
+        <div id="game-wrapper">
+            <div id="grid">
+                <div class="column">
+                    <div class="cell" is_on="1"></div>
+                    <div class="cell"></div>
+                    <div class="cell" is_on="1"></div>
+                    <div class="cell" is_on="1"></div>
+                    <div class="cell"></div>
+                </div>
+                <div class="column">
+                    <div class="cell" is_on="1"></div>
+                    <div class="cell"></div>
+                    <div class="cell" is_on="1"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                </div>
+                <div class="column">
+                    <div class="cell"></div>
+                    <div class="cell" is_on="1"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                </div>
+                <div class="column">
+                    <div class="cell" is_on="1"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell" is_on="1"></div>
+                    <div class="cell"></div>
+                </div>
+                <div class="column">
+                    <div class="cell" is_on="1"></div>
+                    <div class="cell"></div>
+                    <div class="cell"></div>
+                    <div class="cell" is_on="1"></div>
+                    <div class="cell"></div>
+                </div>
+            </div> <!-- /grid-- >
+            <button class="btn">alpha</button>
+            <button class="btn">alpha</button>
+            <button class="btn">alpha</button>
+            <button class="btn">alpha</button>
+        </div> <!-- /game-wrapper-- >
+    </body>
+</html>
