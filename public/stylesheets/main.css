@@ -226,10 +226,11 @@ p {
 	line-height: 22px;
 	margin-bottom: 18px;
 }
+p strong{
+}
 .spark ul {
-    float: left;
     list-style: none outside none;
-    margin: 0 0 0 30px;
+    margin: 0;
     padding: 0;
 }
 .spark ul li {
@@ -238,13 +239,12 @@ p {
 .spark li {
     background-image: -moz-linear-gradient(center top , #FAFAFA 0px, #DCDCDC 100%);
     border-color: #ACACAC;
-    border-radius: 2px 2px 2px 2px;
+    border-radius: 15px;
     border-style: solid;
     border-width: 1px;
     cursor: pointer;
     display: inline-block;
     font-size: 13px;
-    font-weight: bold;
     height: 2.95em;
     line-height: 2.8em;
     margin-right: 10px;
@@ -254,6 +254,10 @@ p {
     vertical-align: middle;
     white-space: nowrap;
     word-wrap: normal;
+    text-shadow: 1px 1px white;
+    -moz-box-shadow: 1px 1px white;
+    -webkit-box-shadow: 1px 1px white;
+    box-shadow: 1px 1px white;
 }
 .spark li:hover {
     background-color: #E0E0E0;
@@ -266,4 +270,19 @@ p {
     background-image: -moz-linear-gradient(center top , #C8C8C8 0px, #E6E6E6 100%);
     border-color: #888888 #AAAAAA #CCCCCC;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25) inset, 0 1px 0 #FFFFFF;
+}
+.spark li a:link, a:visited{
+    border:none;
+    color: #92b300;
+    font-size: 18px;
+    text-decoration: bold;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    background: transparent;
+}
+.spark li a:hover{
+    color: #677e00;
+}
+.spark li a:active{
+    color: #c72a5b;
 }

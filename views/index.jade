@@ -8,15 +8,61 @@ block content
   p.span9.offset2
     | The "game" is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. One interacts with the Game of Life by creating an initial configuration and observing how it evolves.
   p.span9.offset2
+    strong Directions: Want to play? Press "BEGIN". <br />
+  div.spark.span9.offset2
+    ul
+      li
+        span
+          a(href="#") begin!
+      li
+        span
+          a(href="#") pause
+      li
+        span
+          a(href="#") clear
+      li
+        span
+          a(href="#") &hearts;
+  div.span9.offset2
+    div#game-wrapper.span9.offset2
+      section#grid
+//        .column
+          .cell(state='1')
+          .cell(state='1')
+          .cell(state='1')
+          .cell(state='1')
+          .cell(state='1')
+        .column
+          .cell(state='1')
+          .cell
+          .cell
+          .cell
+          .cell(state='1')
+        .column
+          .cell(state='1')
+          .cell
+          .cell(state='1')
+          .cell
+          .cell(state='1')
+        .column
+          .cell(state='1')
+          .cell
+          .cell
+          .cell
+          .cell(state='1')
+ //       .column
+          .cell(state='1')
+          .cell(state='1')
+          .cell(state='1')
+          .cell(state='1')
+          .cell(state='1')
+
+
+
+//  p.span9.offset2
     input(type="button", class="btn", value="alpha")
     input(type="button", class="btn", value="bravo")
     input(type="button", class="btn", value="charlie")
     input(type="button", class="btn", value="delta")
     input(type="button", class="btn", value="echo")
-  p.span9.offset2
-    input(type='radio', name='thing', value='1') 
-      | Thing 1 
-    br
-    input(type='radio', name='thing2', value='2') 
-      | Thing 2 
-    br
+ 
