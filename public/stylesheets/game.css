@@ -21,7 +21,7 @@
     float: left;
 }
 .column:last-child { border: 0 }
-#game-wrapper {
+#game-wrapper, canvas {
     margin: 0 auto;
     margin-top: 2%;
 }
