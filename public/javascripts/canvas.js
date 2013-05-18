@@ -53,6 +53,26 @@ function diagonal() {
 oHaiGrid(10,"rgb(170,170,170)");
 
 
+// Find the canvas top-left.
+var canvasLeft = 0, canvasTop = 0;
+(function() {
+    for (var element = canvas; element !== null; element = element.offsetParent) {
+        canvasLeft += element.offsetLeft;
+        canvasTop  += element.offsetTop;
+    }
+})();
+
+//canvasLeft = canvas.offsetLeft;
+//canvasTop = canvas.offsetTop;
+
+canvas.addEventListener('mousedown', function(event) {
+  var xMouse = event.clientX - canvasLeft;
+  var yMouse = event.clientY - canvasTop;
+  // SUPER HACKER SUCKS!!!!!  why doesn't the correct y-point show up!?  scheisse!
+  console.log( xMouse, yMouse );
+});
+
+
 
 
 
