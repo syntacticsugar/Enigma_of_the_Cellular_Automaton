@@ -132,21 +132,23 @@ function oneStep() {
   grrrid = nextGrrrid;
 }
 
+/*
 //               mini-pulsar
 for (var i = 0; i < holyShit.length; i++) {
   for (var j = 0; j < holyShit[0].length; j++) {
     grrrid[33 + i][21 + j] = holyShit[i][j];
   }
 }
+*/
 
-/*
 //                ACORN!
 for (var i = 0; i < acorn.length; i++) {
   for (var j = 0; j < acorn[0].length; j++) {
-    grrrid[i+20][j+40] = acorn[i][j];
+    grrrid[j+80][i+40] = acorn[i][j]; // switch axis
   }
 }
 
+/*
 //                PULSAR!
 for (var i = 0; i < pulsar.length; i++) {
   for (var j = 0; j < pulsar[0].length; j++) {
