@@ -28,6 +28,7 @@ var gridPixelSize = 10;
 var unit = gridPixelSize;  // nicky says to start with 30, a bigger square.
 var runGame = false
 
+// empty grid.
 var grrrid = [];
 for ( var i = 0; i <= Math.floor(width/unit); i++ ) {
   grrrid.push([]);
@@ -35,6 +36,16 @@ for ( var i = 0; i <= Math.floor(width/unit); i++ ) {
     grrrid[i].push(0);
   }
 }
+
+// empty grrrid 
+function zilch() {
+  for ( var i = 0; i <= Math.floor(width/unit); i++ ) {
+    for ( var j = 0; j <= Math.floor(height/unit); j++ ) {
+      grrrid[i][j] = 0;
+    }
+  }
+}
+
 
 // write a function that takes a coordinate like (73, 46)
 // and returns its corresponding cell (7, 4)
@@ -102,10 +113,7 @@ canvas.addEventListener('mousedown', function(event) {
     clearCell(i,j);
     grrrid[i][j] = 0;
   }
-
-
 });
-
 
 function displayGrid(grid) {
   // redraws the next step of the grid on the canvas
@@ -117,26 +125,42 @@ function displayGrid(grid) {
   }
 }
 
-
 function oneStep() {
   var nextGrrrid = nextGrid(grrrid);
   displayGrid(nextGrrrid);
   grrrid = nextGrrrid;
 }
 
-
-// run the codez!!!
-
+//               mini-pulsar
 for (var i = 0; i < holyShit.length; i++) {
   for (var j = 0; j < holyShit[0].length; j++) {
     grrrid[33 + i][21 + j] = holyShit[i][j];
   }
 }
 
+/*
+//                ACORN!
+for (var i = 0; i < acorn.length; i++) {
+  for (var j = 0; j < acorn[0].length; j++) {
+    grrrid[j+40][i+20] = acorn[i][j];
+  }
+}
+*/
+
+/*                PULSAR!
+for (var i = 0; i < pulsar.length; i++) {
+  for (var j = 0; j < pulsar[0].length; j++) {
+    grrrid[33 + i][21 + j] = pulsar[i][j];
+  }
+}
+*/
+
+
 oHaiGrid(10,"rgb(170,170,170)");
 displayGrid(grrrid);
 
-setInterval(function () {if (runGame) {oneStep()}}, 500); 
+setInterval(function () {if (runGame) {oneStep()}}, 1); 
 
 document.getElementById('begin').onclick = function () {runGame = true}
 document.getElementById('pause').onclick = function () {runGame = false}
+document.getElementById('clear').onclick = function () {zilch(); displayGrid(grrrid)}
