@@ -102,7 +102,12 @@ function nextGrid(currentGrid){
   var newGrid = cloneGrid(currentGrid);
   for ( var i = 0; i < newGrid.length; i++ ){
     for ( var j = 0; j < newGrid[0].length; j++ ) {
-      newGrid[i][j] = nextCell(currentGrid[i][j], getNeighbors(currentGrid, [i,j]))
+      //console.log('col = ' + j + ', row = ' + i);
+      var c = currentGrid[i][j];
+      //console.log('current = ' + c);
+      var n = getNeighbors(currentGrid, [i,j]);
+      //console.log('neighbors = ' + n);
+      newGrid[i][j] = nextCell(currentGrid[i][j], getNeighbors(currentGrid, [i,j]));
     }
   }
   return newGrid;

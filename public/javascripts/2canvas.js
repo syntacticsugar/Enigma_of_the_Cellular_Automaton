@@ -26,12 +26,13 @@ function oHaiGrid(gridPixelSize, colour) {
 // global variables!!!!!!!!!!!!!!!!!!!!!
 var gridPixelSize = 10;
 var unit = gridPixelSize;  // nicky says to start with 30, a bigger square.
+var runGame = false
 
 var grrrid = [];
-for ( var j = 0; j < height/unit; j++ ) {
+for ( var i = 0; i <= Math.floor(width/unit); i++ ) {
   grrrid.push([]);
-  for ( var i = 0; i < width/unit; i++ ) {
-    grrrid[j].push(0);
+  for ( var j = 0; j <= Math.floor(height/unit); j++ ) {
+    grrrid[i].push(0);
   }
 }
 
@@ -63,7 +64,6 @@ function diagonal() {
   }
 }
 
-oHaiGrid(10,"rgb(170,170,170)");
 
 
 // Find the canvas top-left.
@@ -95,7 +95,48 @@ canvas.addEventListener('mousedown', function(event) {
   var i = whereAmI(xMouse,yMouse)[0]
   var j = whereAmI(xMouse,yMouse)[1]
 
-  fillCell(i,j);
+  if (grrrid[i][j] === 0 ) {
+    fillCell(i,j);
+    grrrid[i][j] = 1;
+  }else {
+    clearCell(i,j);
+    grrrid[i][j] = 0;
+  }
+
 
 });
 
+
+function displayGrid(grid) {
+  // redraws the next step of the grid on the canvas
+  for ( var i = 0; i < grid.length; i++ ){
+    for ( var j = 0; j < grid[0].length; j++ ) {
+      if (grid[i][j] === 0) { clearCell(i,j) }
+      else { fillCell(i,j)};
+    }
+  }
+}
+
+
+function oneStep() {
+  var nextGrrrid = nextGrid(grrrid);
+  displayGrid(nextGrrrid);
+  grrrid = nextGrrrid;
+}
+
+
+// run the codez!!!
+
+for (var i = 0; i < holyShit.length; i++) {
+  for (var j = 0; j < holyShit[0].length; j++) {
+    grrrid[33 + i][21 + j] = holyShit[i][j];
+  }
+}
+
+oHaiGrid(10,"rgb(170,170,170)");
+displayGrid(grrrid);
+
+setInterval(function () {if (runGame) {oneStep()}}, 500); 
+
+document.getElementById('begin').onclick = function () {runGame = true}
+document.getElementById('pause').onclick = function () {runGame = false}
