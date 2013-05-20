@@ -24,7 +24,8 @@ function oHaiGrid(gridPixelSize, colour) {
 }
 
 // global variables!!!!!!!!!!!!!!!!!!!!!
-var gridPixelSize = 10;
+//var gridPixelSize = 10;
+var gridPixelSize = 5;
 var unit = gridPixelSize;  // nicky says to start with 30, a bigger square.
 var runGame = false
 
@@ -142,12 +143,11 @@ for (var i = 0; i < holyShit.length; i++) {
 //                ACORN!
 for (var i = 0; i < acorn.length; i++) {
   for (var j = 0; j < acorn[0].length; j++) {
-    grrrid[j+40][i+20] = acorn[i][j];
+    grrrid[i+20][j+40] = acorn[i][j];
   }
 }
-*/
 
-/*                PULSAR!
+//                PULSAR!
 for (var i = 0; i < pulsar.length; i++) {
   for (var j = 0; j < pulsar[0].length; j++) {
     grrrid[33 + i][21 + j] = pulsar[i][j];
@@ -156,7 +156,7 @@ for (var i = 0; i < pulsar.length; i++) {
 */
 
 
-oHaiGrid(10,"rgb(170,170,170)");
+oHaiGrid(gridPixelSize, "rgb(170,170,170)");
 displayGrid(grrrid);
 
 setInterval(function () {if (runGame) {oneStep()}}, 1); 
