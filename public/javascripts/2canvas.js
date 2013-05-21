@@ -148,14 +148,14 @@ for (var i = 0; i < acorn.length; i++) {
   }
 }
 
-/*
+
 //                PULSAR!
-for (var i = 0; i < pulsar.length; i++) {
-  for (var j = 0; j < pulsar[0].length; j++) {
-    grrrid[33 + i][21 + j] = pulsar[i][j];
-  }
-}
-*/
+// for (var i = 0; i < pulsar.length; i++) {
+//   for (var j = 0; j < pulsar[0].length; j++) {
+//     grrrid[33 + i][21 + j] = pulsar[i][j];
+//   }
+// }
+
 
 
 oHaiGrid(gridPixelSize, "rgb(170,170,170)");
