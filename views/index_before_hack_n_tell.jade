@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  p.span9.offset2
+    | The Game of Life, also known simply as Life, is a
+    a('http://en.wikipedia.org/wiki/Cellular_automaton') cellular automaton 
+    | devised by the British mathematician John Horton Conway in 1970.
+  p.span9.offset2
+    | The "game" is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. One interacts with the Game of Life by creating an initial configuration and observing how it evolves.
+  p.span9.offset2
+    strong Directions: Want to play? Press "BEGIN". <br />
+  div.spark.span9.offset2
+    ul
+      li
+        span
+          //a#begin(href="#") begin!
+          button#begin begin!
+      li
+        span
+          //a#pause(href="#") pause
+          button#pause pause
+      li
+        span
+          button#clear clear
+      li
+        span
+          a(href="#") &hearts;
+  div.span9.offset2
+    canvas(id= 'canvas', width= '1200', height= '800')
+      br
+      br
+      br
+      br
+      br
+      br
+
