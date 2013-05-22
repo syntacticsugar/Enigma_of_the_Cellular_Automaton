@@ -290,6 +290,6 @@ p strong{
 .spark li a:active, button:active {
     color: #c72a5b;
 }
-#description {
-  width: 832;
+.buttonz:hover {
+    cursor: pointer;
 }
