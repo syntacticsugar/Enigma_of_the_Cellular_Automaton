@@ -173,8 +173,9 @@ function drawPattern(grid, pattern, offsetX, offsetY) {
   }
 }
 
-//drawPattern(globalGrid, acornSimple, 50, 40); 
-drawPattern(globalGrid, pulsar, 20, 10); 
+// THIS IS WHERE WE CONTROL OUR CONFIGURATIONS, for now
+//drawPattern(globalGrid, acornSimple, 50, 40);
+drawPattern(globalGrid, pulsar, 20, 10);
 
 //                PULSAR!
 // for (var i = 0; i < pulsar.length; i++) {
@@ -208,12 +209,27 @@ document.getElementById('toggle').onclick = function () {
 //document.getElementById('pause').onclick = function () {runGame = false};
 document.getElementById('clear').onclick = function () {
   zilch();
-  displayGrid(globalGrid)
+  displayGrid(globalGrid);
 };
-document.getElementById('acorn').onclick = function () {runGame = false};
-//document.getElementById('holyShit').onclick = function () {runGame = false};
-//document.getElementById('glider').onclick = function () {runGame = false};
-//document.getElementById('random').onclick = function () {runGame = false};
+
+function configLoader(config, offsetX, offsetY) {
+  // first, we wrap the code in a function & return it: A CLOSURE.
+  // this function "closes over" config, offsetX, offsetY
+  return function () {
+    // 1. pauses game state
+    runGame = false;
+    // 2. loads new config
+    drawPattern(globalGrid, config, offsetX, offsetY);
+    // 3. display new grid
+    displayGrid(globalGrid);
+  }
+}
+
+//document.getElementById('acorn').onclick = function () {configLoader(acornSimple, 50, 40)};
+document.getElementById('acorn').onclick = configLoader(acornSimple, 50, 40);
+document.getElementById('holyShit').onclick = configLoader(holyShit, 20, 10);
+//document.getElementById('glider').onclick = configLoader(glider, 30, 30);
+//document.getElementById('random').onclick = configLoader(random);
 
 
 
