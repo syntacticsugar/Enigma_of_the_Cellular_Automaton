@@ -6,6 +6,10 @@ body {
 	background-color: #dadada;
 }
 
+.container {
+  width: 832px;
+}
+
 a {
 	color: #b17809;
 	padding: 1px 1px 1px 5px;
@@ -233,10 +237,10 @@ p strong{
     margin: 0;
     padding: 0;
 }
-.spark ul li {
+.spark ul li, button {
     margin-right: 10px;
 }
-.spark li {
+.spark li, button {
     background-image: -moz-linear-gradient(center top , #FAFAFA 0px, #DCDCDC 100%);
     border-color: #ACACAC;
     border-radius: 15px;
@@ -259,19 +263,19 @@ p strong{
     -webkit-box-shadow: 1px 1px white;
     box-shadow: 1px 1px white;
 }
-.spark li:hover {
+.spark li:hover, button:hover {
     background-color: #E0E0E0;
     background-image: -moz-linear-gradient(center top , #FAFAFA 0px, #DCDCDC 100%);
     border-color: #CCCCCC #CCCCCC #AAAAAA;
     box-shadow: 0 0 1px #FFFFFF inset;
     text-shadow: 0 1px 0 #FFFFFF;
 }
-.spark li:active {
+.spark li:active, button:active {
     background-image: -moz-linear-gradient(center top , #C8C8C8 0px, #E6E6E6 100%);
     border-color: #888888 #AAAAAA #CCCCCC;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25) inset, 0 1px 0 #FFFFFF;
 }
-.spark li a:link, a:visited{
+.spark li a:link, a:visited, button:link, button:visited {
     border:none;
     color: #92b300;
     font-size: 18px;
@@ -280,9 +284,12 @@ p strong{
     letter-spacing: -0.02em;
     background: transparent;
 }
-.spark li a:hover{
+.spark li a:hover, button:hover {
     color: #677e00;
 }
-.spark li a:active{
+.spark li a:active, button:active {
     color: #c72a5b;
+}
+.buttonz:hover {
+    cursor: pointer;
 }
