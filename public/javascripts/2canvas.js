@@ -228,6 +228,23 @@ function configLoader(config, offsetX, offsetY) {
 //document.getElementById('acorn').onclick = function () {configLoader(acornSimple, 50, 40)};
 document.getElementById('acorn').onclick = configLoader(acornSimple, 50, 40);
 document.getElementById('holyShit').onclick = configLoader(holyShit, 20, 10);
+
+// version 1, inline (anonymous) function
+document.getElementById('step').onclick = function() {
+  runGame = false;
+  oneStep();
+};
+
+/*
+//version 2, named function
+function pauseAndStep() {
+  runGame = false;
+  oneStep();
+}
+
+document.getElementById('step').onclick = pauseAndStep;
+*/
+
 //document.getElementById('glider').onclick = configLoader(glider, 30, 30);
 //document.getElementById('random').onclick = configLoader(random);
 
@@ -236,7 +253,7 @@ document.getElementById('holyShit').onclick = configLoader(holyShit, 20, 10);
 // TO DO:
 // a:active state for 'play' button.
 // 'one-step' button
-// place graphic design on 'Fuck Me on Github' 
+// place graphic design on 'Furk Me on Github' 
 // by putting danging hearts on the ribbon.
 
 
@@ -247,5 +264,4 @@ function toggle(object) {
   else if (element.className=="pause") {
   }
 }
-
 
