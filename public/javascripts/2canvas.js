@@ -145,9 +145,9 @@ function oneStep() {
 
 /*
 //              mini-pulsar
-for (var i = 0; i < holyShit.length; i++) {
-  for (var j = 0; j < holyShit[0].length; j++) {
-    globalGrid[33 + i][21 + j] = holyShit[i][j];
+for (var i = 0; i < pulsar.length; i++) {
+  for (var j = 0; j < pulsar[0].length; j++) {
+    globalGrid[33 + i][21 + j] = pulsar[i][j];
   }
 }
 */
@@ -227,7 +227,7 @@ function configLoader(config, offsetX, offsetY) {
 
 //document.getElementById('acorn').onclick = function () {configLoader(acornSimple, 50, 40)};
 document.getElementById('acorn').onclick = configLoader(acornSimple, 50, 40);
-document.getElementById('holyShit').onclick = configLoader(holyShit, 20, 10);
+document.getElementById('pulsar').onclick = configLoader(pulsar, 20, 10);
 
 // version 1, inline (anonymous) function
 document.getElementById('step').onclick = function() {
