@@ -1,4 +1,4 @@
-<a href="https://github.com/syntacticsugar/Enigma_of_the_Cellular_Automaton">Click here to launch the party.</a>
+<a href="http://syntacticsugar.github.io/Enigma_of_the_Cellular_Automaton/">Click here to launch the party.</a>
 
 
 ### The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.
