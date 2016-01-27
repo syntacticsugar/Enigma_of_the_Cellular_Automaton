@@ -25,7 +25,7 @@ function oHaiGrid(gridPixelSize, colour) {
 
 // global variables!!!!!!!!!!!!!
 //var gridPixelSize = 10;
-var gridPixelSize = 10;
+var gridPixelSize = 5;
 var unit = gridPixelSize;  // nicky says to start with 30, a bigger square.
 var runGame = false
 
@@ -172,10 +172,16 @@ function drawPattern(grid, pattern, offsetX, offsetY) {
     }
   }
 }
-
+//
+// ##########################################################################
+// ##########################################################################
+//
 // THIS IS WHERE WE CONTROL OUR CONFIGURATIONS, for now
 //drawPattern(globalGrid, acornSimple, 50, 40);
-drawPattern(globalGrid, pulsar, 20, 10);
+drawPattern(globalGrid, acorn, 90, 60);
+//
+// ##########################################################################
+// ##########################################################################
 
 //                PULSAR!
 // for (var i = 0; i < pulsar.length; i++) {

@@ -7,11 +7,21 @@ body {
 }
 
 .container {
-  width: 832px;
+  width: 70%;
+}
+
+p {
+	font-size: 1.2em;
+	color: #915e1e;
+	line-height: 22px;
+	margin-bottom: 18px;
+}
+p strong{
 }
 
 a {
 	color: #b17809;
+  color: #677e00;
 	padding: 1px 1px 1px 5px;
 	background: #f2f2f2;
 	border-bottom: #a3a3a3 solid 1px;
@@ -41,7 +51,7 @@ a:active {
 h1 {
 	font-size: 95px;
 	line-height: 1.2;
-	padding-top: 30px;
+	padding-top: 10px;
 	font-weight: 900;
 	text-transform: uppercase;
 	letter-spacing: 0.06em;
@@ -51,7 +61,7 @@ header {
 
 }
 header h1{
-	margin: 20px auto 0 auto;
+	margin: 0 auto 0 auto;
 	width: 602px;
 	height: 61px;
 	text-indent: -999999px;
@@ -224,14 +234,7 @@ dd {
 	background-color: #2AA9C6;
 	color: #fff;
 }
-p {
-	font-size: 18px;
-	color: #915e1e;
-	line-height: 22px;
-	margin-bottom: 18px;
-}
-p strong{
-}
+
 .spark ul {
     list-style: none outside none;
     margin: 0;
@@ -290,6 +293,18 @@ p strong{
 .spark li a:active, button:active {
     color: #c72a5b;
 }
+.buttonz {
+}
 .buttonz:hover {
     cursor: pointer;
+}
+.buttonz a {
+  border-radius: 9px;
+  padding: 5px 9px 5px 9px;
+  margin: 0 0.3em;
+  font-size: 18px;
+}
+footer {
+  width: 1px;
+  height: 5em;
 }
